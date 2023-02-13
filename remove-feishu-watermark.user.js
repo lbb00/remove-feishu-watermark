@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         移除飞书水印
-// @description  移除飞书水印
-// @version      0.0.1
+// @name         移除飞书文档水印
+// @description  让飞书文档干净一些
+// @version      0.0.2
 // @match        https://*.feishu.cn/*
 // @grant        GM_addStyle
 // @author       lbb00
