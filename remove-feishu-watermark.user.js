@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name        Remove lark watermark | 移除飞书网页水印
 // @description 移除飞书文档、工作台水印
-// @version     0.3.0
+// @version     0.4.0
+// @license     The Unlicense
 // @author      lbb00
 // @homepage    https://github.com/lbb00/remove-feishu-watermark
 // @updateURL   https://github.com/lbb00/remove-feishu-watermark/raw/main/remove-feishu-watermark.user.js
