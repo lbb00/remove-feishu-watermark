@@ -21,4 +21,5 @@ GM_addStyle('#watermark-cache-container{opacity: 0;}')
 GM_addStyle('body>div[style*="inset: 0px;"]:not(:has(*)){opacity: 0;}')
 
 // fixed for https://github.com/lbb00/remove-feishu-watermark/issues/3
-GM_addStyle('body>div[style*="position: fixed"]:not(:has(*)){opacity: 0;}')
+GM_addStyle('body>div[style*="position: fixed"]:not(:has(*)){opacity: 0;}') // for readonly
+GM_addStyle('body>div>div>div>div.suite-clear[style*="position: fixed"]:not(:has(*)){opacity: 0;}') // for editing
