@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name              Remove lark watermark | 移除飞书网页水印
-// @description       移除飞书网页水印
+// @name              移除飞书网页水印 | Remove watermarks of lark
+// @description       移除飞书文档、工作台水印
 // @name:zh-CN        移除飞书网页水印
-// @description:zh-CN 移除飞书网页水印
-// @name:en           Remove lark watermark
-// @description:en    Remove lark watermark
-// @version           0.4.2
+// @description:zh-CN 移除飞书文档、工作台水印
+// @name:en           Remove watermarks of lark
+// @description:en    Remove watermarks from Lark documents and workspace.
+// @version           0.5.0
 // @license           The Unlicense
 // @author            lbb00
 // @homepage          https://github.com/lbb00/remove-feishu-watermark
