@@ -13,6 +13,7 @@
 // @downloadURL       https://github.com/lbb00/remove-feishu-watermark/raw/main/remove-feishu-watermark.user.js
 // @match             https://*.feishu.cn/*
 // @match             https://*.larksuite.com/*
+// @exclude           https://wenjuan.feishu.cn/*
 // @run-at            document-start
 // @grant             GM_addStyle
 // ==/UserScript==
