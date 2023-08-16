@@ -5,7 +5,7 @@
 // @description:zh-CN 移除飞书文档、工作台水印
 // @name:en           Remove watermarks of lark
 // @description:en    Remove watermarks from Lark documents and workspace.
-// @version           0.5.1
+// @version           0.6.0
 // @license           The Unlicense
 // @author            lbb00
 // @homepage          https://github.com/lbb00/remove-feishu-watermark
@@ -17,16 +17,40 @@
 // @grant             GM_addStyle
 // ==/UserScript==
 
+// GM_addStyle has removed from Greasemonkey v4.0
+// https://groups.google.com/g/greasemonkey-users/c/KW71DL6Yjng
+if (typeof GM_addStyle === 'undefined') {
+  this.GM_addStyle = (aCss) => {
+    'use strict'
+    const head = document.getElementsByTagName('head')[0]
+    if (head) {
+      const style = document.createElement('style')
+      style.setAttribute('type', 'text/css')
+      style.textContent = aCss
+      head.appendChild(style)
+      return style
+    }
+    return null
+  }
+}
+
+const bgImageNone = '{background-image: none !important;}'
+function genStyle(selector) {
+  return `${selector}${bgImageNone}`
+}
+
 // global
-GM_addStyle('[class*="watermark"]{background-image:  none !important:}')
+GM_addStyle(genStyle('[class*="watermark"]'))
 
 // 飞书文档
-GM_addStyle('.ssrWaterMark{background-image:  none !important;}')
-GM_addStyle('body>div>div>div>div[style*="position: fixed"]:not(:has(*)){background-image:  none !important;}')
+GM_addStyle(genStyle('.ssrWaterMark'))
+GM_addStyle(genStyle('body>div>div>div>div[style*="position: fixed"]:not(:has(*))'))
+// firefox not support :has()
+GM_addStyle(genStyle('[class*="TIAWBFTROSIDWYKTTIAW"]'))
 
 // fixed for https://github.com/lbb00/remove-feishu-watermark/issues/3
-GM_addStyle('body>div[style*="position: fixed"]:not(:has(*)){background-image: none !important;}') // for readonly
+GM_addStyle(genStyle('body>div[style*="position: fixed"]:not(:has(*))')) // for readonly
 
 // 工作台
-GM_addStyle('#watermark-cache-container{background-image:  none !important;}')
-GM_addStyle('body>div[style*="inset: 0px;"]:not(:has(*)){background-image:  none !important}')
+GM_addStyle(genStyle('#watermark-cache-container'))
+GM_addStyle(genStyle('body>div[style*="inset: 0px;"]:not(:has(*))'))
