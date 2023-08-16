@@ -5,7 +5,7 @@
 // @description:zh-CN 移除飞书文档、工作台水印
 // @name:en           Remove watermarks of lark
 // @description:en    Remove watermarks from Lark documents and workspace.
-// @version           0.6.0
+// @version           0.7.0
 // @license           The Unlicense
 // @author            lbb00
 // @homepage          https://github.com/lbb00/remove-feishu-watermark
@@ -54,3 +54,6 @@ GM_addStyle(genStyle('body>div[style*="position: fixed"]:not(:has(*))')) // for 
 // 工作台
 GM_addStyle(genStyle('#watermark-cache-container'))
 GM_addStyle(genStyle('body>div[style*="inset: 0px;"]:not(:has(*))'))
+
+// Web 聊天
+GM_addStyle(genStyle('.chatMessages>div[style*="inset: 0px;"]'))
