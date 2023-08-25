@@ -41,7 +41,7 @@ function genStyle(selector) {
 
 // global
 GM_addStyle(genStyle('[class*="watermark"]'))
-GM_addStyle(genStyle('[[style*="pointer-events: none"]'))
+GM_addStyle(genStyle('[style*="pointer-events: none"]'))
 
 // 飞书文档
 GM_addStyle(genStyle('.ssrWaterMark'))
