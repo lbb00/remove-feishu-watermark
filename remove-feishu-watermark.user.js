@@ -1,16 +1,16 @@
 // ==UserScript==
-// @name              移除飞书网页水印 | Remove watermarks of lark
-// @description       移除飞书文档、工作台水印
+// @name              移除飞书网页水印 | Remove watermarks for Lark
+// @description       移除飞书网页水印
 // @name:zh-CN        移除飞书网页水印
-// @description:zh-CN 移除飞书文档、工作台水印
-// @name:en           Remove watermarks of lark
-// @description:en    Remove watermarks from Lark documents and workspace.
-// @version           0.7.2
+// @description:zh-CN 移除飞书网页水印
+// @name:en           Remove watermarks for Lark
+// @description:en    Remove watermarks for Lark.
+// @version           0.7.3
 // @license           The Unlicense
 // @author            lbb00
 // @homepage          https://github.com/lbb00/remove-feishu-watermark
-// @updateURL         https://github.com/lbb00/remove-feishu-watermark/raw/main/remove-feishu-watermark.user.js
-// @downloadURL       https://github.com/lbb00/remove-feishu-watermark/raw/main/remove-feishu-watermark.user.js
+// @updateURL         https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.user.js
+// @downloadURL       https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.user.js
 // @match             https://*.feishu.cn/*
 // @match             https://*.larksuite.com/*
 // @match             https://*.larkoffice.com/*
