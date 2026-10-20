@@ -15,3 +15,15 @@ This script requires a **UserScript Manager** to run.
 2. Click one of the following links to install the script:
    - [GitHub](https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.user.js)
    - [Greasy Fork](https://greasyfork.org/scripts/459967)
+
+## uBlock Origin / AdGuard
+
+Prefer not to install a UserScript manager? The same selectors are also published as a filter list.
+
+Add this URL in **uBlock Origin → Settings → Filter lists → Import** (or **AdGuard → Filters → Custom**):
+
+```
+https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.ublock.txt
+```
+
+Requires `:style()` support, i.e. uBlock Origin or AdGuard. uBlock Origin Lite does not support custom lists.

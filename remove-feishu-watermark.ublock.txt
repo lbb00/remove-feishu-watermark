@@ -1,0 +1,28 @@
+! Title: 移除飞书网页水印 | Remove watermarks for Lark
+! Description: Filter list version of the remove-feishu-watermark userscript, for uBlock Origin / AdGuard.
+! Homepage: https://github.com/lbb00/remove-feishu-watermark
+! License: The Unlicense
+! Expires: 7 days
+
+! The selectors below mirror remove-feishu-watermark.user.js. Keep both in sync.
+! :style() is used instead of plain element hiding so the watermark layers keep
+! their size and stacking, exactly like GM_addStyle does in the userscript.
+
+! global
+feishu.cn,larksuite.com,larkoffice.com##[class*="watermark"]:style(background-image: none !important)
+feishu.cn,larksuite.com,larkoffice.com##[style*="pointer-events: none"]:style(background-image: none !important)
+
+! 飞书文档 | Lark documents
+feishu.cn,larksuite.com,larkoffice.com##.ssrWaterMark:style(background-image: none !important)
+feishu.cn,larksuite.com,larkoffice.com##body > div > div > div > div[style*="position: fixed"]:not(:has(*)):style(background-image: none !important)
+feishu.cn,larksuite.com,larkoffice.com##[class*="TIAWBFTROSIDWYKTTIAW"]:style(background-image: none !important)
+
+! fixed for https://github.com/lbb00/remove-feishu-watermark/issues/3 (readonly)
+feishu.cn,larksuite.com,larkoffice.com##body > div[style*="position: fixed"]:not(:has(*)):style(background-image: none !important)
+
+! 工作台 | Lark workspace
+feishu.cn,larksuite.com,larkoffice.com###watermark-cache-container:style(background-image: none !important)
+feishu.cn,larksuite.com,larkoffice.com##body > div[style*="inset: 0px;"]:not(:has(*)):style(background-image: none !important)
+
+! Web 聊天 | Lark Web chat
+feishu.cn,larksuite.com,larkoffice.com##.chatMessages > div[style*="inset: 0px;"]:style(background-image: none !important)
